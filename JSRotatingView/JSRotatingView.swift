@@ -11,7 +11,7 @@ import UIKit
 // the delegate class that allows the user to deal with rotation of the UIView gracefully
 public protocol JSRotationDelegate
 {
-  func jsRotatingView(_ view:JSRotatingView, hasRotatedToOrientation:UIDeviceOrientation)
+  func jsRotatingView(_ view:JSRotatingView, hasRotatedTo orientation:UIDeviceOrientation)
 }
 
 open class JSRotatingView: UIView
@@ -49,7 +49,7 @@ open class JSRotatingView: UIView
     let currentOrientation = UIDevice.current.orientation
     if currentOrientation != lastOrientation
     {
-      rotationDelegate?.jsRotatingView(self, hasRotatedToOrientation: currentOrientation)
+      rotationDelegate?.jsRotatingView(self, hasRotatedTo: currentOrientation)
       lastOrientation = currentOrientation
     }
     
